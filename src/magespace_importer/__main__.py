@@ -72,8 +72,10 @@ class MagespaceModelImporter:
         Returns:
             bool: True if logged in, False otherwise.
         """
-        logger.info("Please log into mage.space using your account, then")
-        input("press Enter to continue...")
+        logger.info(
+            "Please log into mage.space using your account, then click here and press Enter"
+        )
+        input(">>> Waiting for Enter...")
 
         try:
             self.driver.find_element(
@@ -198,9 +200,11 @@ def import_models_to_magespace(
     url_import: str | None = None,
 ) -> None:
     """
-    Helps importing models from a list of URLs into mage.space
+    Helps importing models from a list of URLs into https://mage.space/
 
-    `magespace_importer` is a Python-based tool designed to simplify importing models from a list of URLs into mage.space. It opens each URL in a new browser tab, and lets you perform the model import there. After you've imported a model, close the tab. To finish processing, close all browser tabs.
+    `magespace_importer` is a Python-based tool designed to simplify importing models from a list of URLs into https://mage.space/
+
+    It opens each URL in a new browser tab, and lets you perform the model import there. After you've imported a model, close the tab. To finish processing, close all browser tabs.
 
     ## Installation
 

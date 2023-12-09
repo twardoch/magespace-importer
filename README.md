@@ -1,6 +1,8 @@
 # magespace_importer
 
-`magespace_importer` is a Python-based tool designed to simplify importing models from a list of URLs into mage.space. It opens each URL in a new browser tab, and lets you perform the model import there. After you've imported a model, close the tab. To finish processing, close all browser tabs.
+`magespace_importer` is a Python-based tool designed to simplify importing models from a list of URLs into [mage.space](https://mage.space/)
+
+It opens each URL in a new browser tab, and lets you perform the model import there. After you've imported a model, close the tab. To finish processing, close all browser tabs.
 
 ## Installation
 
@@ -28,6 +30,10 @@ Then, use the tool in command line with optional arguments:
 ```bash
 magespace_importer
 ```
+
+The tool will open a new Chrome browser window where you'll need to log into https://mage.space/ using your credentials, then click the Terminal window and press Enter. 
+
+Then the tool open each URL in a new tab. You can then manually finalize the import in each tab. After you've imported a model, close the tab. To finish processing, close all browser tabs.
 
 ### Optional Arguments
 
