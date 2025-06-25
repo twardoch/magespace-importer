@@ -6,10 +6,11 @@ from pathlib import Path
 
 import fire
 from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
+from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.remote.webelement import WebElement
 from tqdm import tqdm
 from undetected_chromedriver import Chrome
 
@@ -84,7 +85,7 @@ class MagespaceModelImporter:
             )
             logger.info("Logged in successfully.")
             return True
-        except Exception as e:
+        except NoSuchElementException:
             logger.error("Error logging in")
             return False
 
@@ -252,7 +253,7 @@ def import_models_to_magespace(
     ```
 
     """
-    importer = MagespaceModelImporter(models_path, driver_path, url_import)
+    MagespaceModelImporter(models_path, driver_path, url_import)
 
 
 def cli():
